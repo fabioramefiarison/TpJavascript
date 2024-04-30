@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:  Tahoma, sans-serif;
+}
+body{
+    background-color: blue;
+    background-image: linear-gradient(to right,rgba(255, 255, 255, 0.733),rgb(218, 147, 147),blue);
+    overflow: hidden;
+}
+:root{
+    --colore : rgba(255, 255, 255, 0.26);
+}
+main{
+    display: block;
+    margin: 10vw auto;
+    width: 600px;
+    padding: 10px 0;
+    background-color: var(--colore);
+    text-align: center;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.titre{
+    letter-spacing: 2px;
+    margin: 13px 0;
+    text-decoration: underline;
+    color: rgb(108, 71, 240);
+}
+#nav-recherche{
+    background-color: rgb(255, 179, 179);
+    border-radius: 12px;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+#barre-recherche{
+    width: 80%;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding-left: 5px;
+    border-right: 5px solid var(--colore);
+    font-size: 20px;
+}
+#nav-recherche span{
+    font-weight: bold;
+    color: whitesmoke;
+    margin: 0 1vw;
+    background-color: transparent;
+    cursor: grab;
+}
+#nav-recherche span:hover{
+    font-size: 15px;
+}
+#my-list li{
+    margin: 12px 25px 2px 25px ; 
+    border-bottom: 1px dashed rgb(255, 179, 179);
+    white-space: nowrap;
+    width: 90%;
+    max-width: 95%;
+    float: left;
+    text-align: left;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    color: rgb(67, 63, 117);
+    transition: 0.2s ease;
+    animation: apparition 0.5S ease;
+}
+#ajouter{
+    border: none;
+    padding: 18px 15px 12px 15px;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    cursor: grab;
+    transition: 0.3s ease;
+}
+#ajouter:hover{
+    font-size: 16px;
+    color: rgb(67, 63, 117);;
+}
+@keyframes apparition {
+    from{
+        transform: translateX(-50px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+#my-list{
+    max-height: 250px;
+    overflow-y: auto;
+}
+.close{
+    float: right;
+    color: red;
+    font-size: 25px;
+    cursor: grab;
+}
+.close:hover{
+    font-size: 28px;
+}
+.date{
+    font-size: 10px;
+    margin-top: 11px;
+    float: right;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 30px;
+    width: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 179, 179); 
+    border-radius: 30px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
+  @media screen and (max-width : 750px) { 
+    main{
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    #barre-recherche{
+        width: 60%;
+    }
+  }
